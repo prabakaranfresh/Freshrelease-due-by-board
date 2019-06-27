@@ -1,0 +1,28 @@
+{
+  "name": "Freshrelease Due By in Board",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Display Due Date in the Sprint Board",
+  "browser_action": {
+    "default_icon": {
+      "32": "fr.png"
+    },
+    "default_title": "Freshrelease Due By in Board"
+  },
+  "icons": {
+      "128": "fr.png"
+   },
+  "content_scripts": [ {
+    "all_frames": true,
+    "js": [ "jquery.js", "due_date.js" ],
+    "css": ["style.css"],
+    "matches": [ "https://*.freshrelease.com/*" ],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "https://*.freshrelease.com/*",
+    "http://*.freshrelease.com/*",
+    "tabs",
+    "webNavigation"
+  ]
+}
