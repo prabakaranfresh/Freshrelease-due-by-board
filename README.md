@@ -1,8 +1,6 @@
 # Freshrelease-due-by-board
 
-## Display Due By Date in Sprint Board
-
-### [Download Link](https://github.com/prabakaranfresh/Freshrelease-due-by-board/archive/master.zip)
+### Display Due By Date in Sprint Board - [Download Link](https://github.com/prabakaranfresh/Freshrelease-due-by-board/archive/master.zip)
 
 
 
