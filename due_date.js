@@ -26,11 +26,16 @@ function getDueDate() {
 			jQuery('.due-by--loader').remove();
 			jQuery.each(resp.issues, function(){
 				if(this.due_by != null) {
+          var key = this.key;
 					var due_date = (new Date(this.due_by)).toDateString();
 					var elemContainer = jQuery('<div class="entity-details clearfix" />');
-					var elem = jQuery('<span class="entity-story-points">').text("Due By: " + due_date.replace(" ", ", "));
-					jQuery(elemContainer).html(elem);
-					jQuery('.entity-wrap[data-entity-id="'+this.id+'"]').append(elemContainer);
+          var elem = jQuery('<span class="entity-story-points">').text("Due By: " + due_date.replace(" ", ", "));
+          
+          jQuery(elemContainer).html(elem);
+          jQuery(".entity-key").each(function() { 
+            if(this.innerText === key)
+              jQuery(this).parent().parent().append(elemContainer);
+          })
 				}
 			});
 		}
